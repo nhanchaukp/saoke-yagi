@@ -24,7 +24,7 @@
             {{ $slot }}
         </div>
         <footer class="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-center py-4">
-            <p>&copy; {{ date('Y') }} FCODE.vn. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} <a href="https://fcode.vn">FCODE.vn</a> . All rights reserved.</p>
         </footer>
 
         @stack('scripts')

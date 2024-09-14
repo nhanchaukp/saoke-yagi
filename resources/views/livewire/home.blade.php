@@ -51,13 +51,13 @@
                 <table class="min-w-full table-auto border border-gray-300 dark:border-gray-700">
                     <thead class="bg-gray-50 dark:bg-gray-700">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        <th class="px-6 py-3 text-left font-bold text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                             Thời gian
                         </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        <th class="px-6 py-3 text-left font-bold text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                             Số tiền
                         </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        <th class="px-6 py-3 text-left font-bold text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                             Nội dung
                         </th>
                     </tr>
@@ -65,9 +65,9 @@
                     <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                     @foreach($results as $item)
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{{$item->transaction_date}}</td>
-                            <td class="font-semibold px-6 py-4 whitespace-nowrap text-sm text-blue-500 dark:text-blue-400">{{$item->amount}} ₫</td>
-                            <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-100">
+                            <td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">{{$item->transaction_date}}</td>
+                            <td class="font-semibold px-6 py-4 whitespace-nowrap text-blue-500 dark:text-blue-400">{{$item->amount}} ₫</td>
+                            <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                                 {!! \Illuminate\Support\Str::replace($query, '<span class="px-1 rounded bg-yellow-300 text-black dark:bg-yellow-500 dark:text-white">'.$query.'</span>', $item->content, false) !!}
                             </td>
                         </tr>
