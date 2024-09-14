@@ -101,9 +101,7 @@
         <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div class="flex items-center">
                 <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h3M3 6h3M3 14h3m4-8h3m-3 4h3m-3 4h3m4-8h3m-3 4h3m-3 4h3m4-8h3m-3 4h3m-3 4h3M5 20h14M5 16h14M5 12h14m0 8H5m0 0h14" />
-                    </svg>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 22.1875 2.28125 L 20.78125 3.71875 L 25.0625 8 L 4 8 L 4 10 L 25.0625 10 L 20.78125 14.28125 L 22.1875 15.71875 L 28.90625 9 Z M 9.8125 16.28125 L 3.09375 23 L 9.8125 29.71875 L 11.21875 28.28125 L 6.9375 24 L 28 24 L 28 22 L 6.9375 22 L 11.21875 17.71875 Z"></path></svg>
                 </div>
                 <div class="ml-4">
                     <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-200">Số lượng giao dịch</h4>
@@ -117,8 +115,11 @@
         <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div class="flex items-center">
                 <div class="bg-green-100 text-green-600 p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.656 0 3 .895 3 2s-1.344 2-3 2c-1.656 0-3-.895-3-2s1.344-2 3-2zm0-3c-3.31 0-6 2.014-6 4.5S8.69 14 12 14s6-2.014 6-4.5S15.31 5 12 5zm0 12c-3.31 0-6 2.014-6 4.5S8.69 21 12 21s6-2.014 6-4.5S15.31 17 12 17z"/>
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 19h12"></path>
+                        <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                        <path d="M16 16v-12"></path>
+                        <path d="M17 5h-4"></path>
                     </svg>
                 </div>
                 <!-- Statistics -->
