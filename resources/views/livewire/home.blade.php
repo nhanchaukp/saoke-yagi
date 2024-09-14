@@ -66,7 +66,7 @@
                     @foreach($results as $item)
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">{{$item->transaction_date}}</td>
-                            <td class="font-semibold px-6 py-4 whitespace-nowrap text-blue-500 dark:text-blue-400">{{$item->amount}} ₫</td>
+                            <td class="font-semibold px-6 py-4 whitespace-nowrap text-blue-500 dark:text-blue-400">{{ number_format($item->amount) }} ₫</td>
                             <td class="px-6 py-4 text-gray-900 dark:text-gray-100">
                                 {!! \Illuminate\Support\Str::replace($query, '<span class="px-1 rounded bg-yellow-300 text-black dark:bg-yellow-500 dark:text-white">'.$query.'</span>', $item->content, false) !!}
                             </td>
