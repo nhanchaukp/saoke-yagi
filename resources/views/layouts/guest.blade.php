@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title')</title>
+        <title>{{ $title ?? config('app.name') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -16,12 +16,17 @@
 
         <!-- Styles -->
         @livewireStyles
+        @turnstileScripts
     </head>
-    <body class="bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 antialiased">
-        <div>
+    <body class="min-h-screen flex flex-col  bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 antialiased">
+        <div class="flex-grow px-12 py-8">
             {{ $slot }}
         </div>
+        <footer class="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-center py-4">
+            <p>&copy; {{ date('Y') }} FCODE.vn. All rights reserved.</p>
+        </footer>
 
+        @stack('scripts')
         @livewireScripts
     </body>
 </html>
