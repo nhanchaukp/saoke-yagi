@@ -20,7 +20,7 @@
         @turnstileScripts
     </head>
     <body class="min-h-screen flex flex-col  bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 antialiased">
-        <div class="flex-grow px-12 py-8">
+        <div class="flex-grow px-2 py-4 sm:px-12 sm:py-8">
             {{ $slot }}
         </div>
         <footer class="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-center py-4">
