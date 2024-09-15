@@ -1,15 +1,32 @@
 <div class="container">
     <h1 class="font-extrabold text-4xl">Sao Kê VAR 🕵️‍♂️</h1>
     <div class="py-4 text-lg">
-        <p>Dữ liệu cung cấp bởi MTTQ, bao gồm:</p>
-        <ul class="list-disc ml-10">
-            <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid0YSaZTjEw2GBMnT5bNBi49djNxnxi326VjKodHzdxvhpkW3rwTs8u5dCeVGvQmU18l">Số tiền ủng hộ qua số tài khoản Vietcombank 0011001932418 từ ngày 1/9/2024 đến ngày 10/9/2024</a></li>
-            <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid0cGpdUA8JFuB5TPLFX5E1GmhBSkYs99v9rRLY5sY2mTD1pJ16Cq1BvtkrSXLfnsESl">Số tiền ủng hộ qua số tài khoản Vietinbank CT1111 từ ngày 10/9/2024 đến ngày 12/9/2024</a></li>
-            <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid02Xd59uafubKYurxCtfuoscoRWQosyc6X9VbZaG88DgoxWiHYsrmyz44Tq6GBgJm8fl">Số tiền ủng hộ qua ngân hàng BIDV số tài khoản 1261122666 từ ngày 1/9/2024 đến ngày 12/9/2024</a></li>
-            <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" href="https://www.fshare.vn/folder/HVNBBFX5K6WT" target="_blank">Tải PDF sao kê</a></li>
-        </ul>
-
+        <p class="mb-3">Dữ liệu cung cấp bởi <a href="https://www.facebook.com/mttqvietnam" target="_blank" class="text-blue-400">MTTQ</a>, xử lý bởi <a class="text-blue-400" href="https://www.facebook.com/nhancodedao/" target="_blank">Nhân Châu KP</a></p>
+        <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none hover:text-blue-400">Xem ngồn dữ liệu
+                <span class="transition ease-in-out duration-150 group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <ul class="list-disc ml-10">
+                <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid0YSaZTjEw2GBMnT5bNBi49djNxnxi326VjKodHzdxvhpkW3rwTs8u5dCeVGvQmU18l">Số tiền ủng hộ qua số tài khoản Vietcombank 0011001932418 từ ngày 1/9/2024 đến ngày 10/9/2024</a></li>
+                <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid0cGpdUA8JFuB5TPLFX5E1GmhBSkYs99v9rRLY5sY2mTD1pJ16Cq1BvtkrSXLfnsESl">Số tiền ủng hộ qua số tài khoản Vietinbank CT1111 từ ngày 10/9/2024 đến ngày 12/9/2024</a></li>
+                <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid02Xd59uafubKYurxCtfuoscoRWQosyc6X9VbZaG88DgoxWiHYsrmyz44Tq6GBgJm8fl">Số tiền ủng hộ qua ngân hàng BIDV số tài khoản 1261122666 từ ngày 1/9/2024 đến ngày 12/9/2024</a></li>
+                <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" target="_blank" href="https://www.facebook.com/mttqvietnam/posts/pfbid03gwauTiaVtc7yGG9wudXa9G3QxYTerYzcvW5Wd59m4CtCt3w7GBqb8HiJ4qbSjvXl">Số tiền ủng hộ qua số tài khoản Vietcombank 0011001932418 ngày 12/9/2024</a></li>
+                <li><a class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500" href="https://www.fshare.vn/folder/HVNBBFX5K6WT" target="_blank">Tải PDF sao kê</a></li>
+            </ul>
+        </details>
     </div>
+
+    <div class="mt-3">
+        <x-turnstile wire:ignore wire:model="turnstileResponse" />
+    </div>
+    @error('turnstileResponse')
+        <div class="flex-1">
+            <h3 class="text-lg font-medium text-red-700 dark:text-red-800">{{ $message }}</h3>
+        </div>
+    @enderror
+
     <form wire:submit.prevent="searchAction" class="mt-4">
         <div class="relative">
             <x-input
@@ -32,17 +49,7 @@
                 </svg>
             </div>
         </div>
-        <div
-             class="mt-3">
-            <x-turnstile wire:ignore
-                wire:model="turnstileResponse"
-            />
-        </div>
-        @error('turnstileResponse')
-            <div class="flex-1">
-                <h3 class="text-lg font-medium text-red-700 dark:text-red-800">{{ $message }}</h3>
-            </div>
-        @enderror
+        <x-button class="mt-3 w-full py-4 rounded-xl justify-center" type="submit">Tìm kiếm (Enter)</x-button>
     </form>
 
 
