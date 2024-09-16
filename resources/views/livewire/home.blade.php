@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
     <h1 class="font-extrabold text-4xl">Sao Kê VAR 🕵️‍♂️</h1>
     <div class="py-4 text-lg">
         <p class="mb-3">Dữ liệu cung cấp bởi <a href="https://www.facebook.com/mttqvietnam" target="_blank" class="text-blue-400">MTTQ</a>, xử lý bởi <a class="text-blue-400" href="https://www.facebook.com/nhancodedao/" target="_blank">Nhân Châu KP</a></p>
